@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
@@ -20,7 +20,7 @@ export class TareasComponent {
     this.router.navigate(['login']);
   }
   
-  openModal(template: TemplateRef<any>, tamanio) {
+  openModal(template: TemplateRef<any>, tamanio?) {
     this.modalRef = this.modalService.show(template, {class: tamanio});
   }
 }
