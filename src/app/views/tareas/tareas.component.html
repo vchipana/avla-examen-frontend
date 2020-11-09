@@ -74,20 +74,17 @@
         <div class="row">
           <div class="col-md-12">
             <div class="form-group row">
-              <label class="etiqueta col-form-label col-md-3" for="exampleInputUsername">DESCRIPCIÓN</label>
+              <label class="etiqueta col-form-label col-md-3" for="exampleInputDescripcion">DESCRIPCIÓN</label>
               <div class="col-md-9">
-                <input type="text" class="form-control" id="exampleInputUsername">
+                <input type="text" class="form-control" id="exampleInputDescripcion" name="descripcion" [(ngModel)]="tarea.descripcion">
               </div>              
             </div>
             <div class="form-group row">
               <label class="etiqueta col-form-label col-md-3" for="exampleInputUsername">USUARIO</label>
               <div class="col-md-9">
-                <select class="form-control" id="exampleInputUsername">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select class="form-control" id="exampleInputUsername" name="usuarioID" [(ngModel)]="tarea.usuarioID">
+                  <option value="">-Seleccione-</option>
+                  <option *ngFor="let item of usuarios" [value]="item.usuarioID">{{item.nombres}}</option>
                 </select>
               </div>
             </div>
@@ -169,7 +166,7 @@
     </div>
     <div class="modal-footer justify-center">
       <button (click)="modalRef.hide()" type="button" class="btn btn-outline-secondary btn-pequenio">NO</button>
-      <button (click)="modalRef.hide()" type="button" class="btn btn-primary btn-pequenio">SI</button>
+      <button (click)="modalRef.hide(); crearTarea()" type="button" class="btn btn-primary btn-pequenio">SI</button>
     </div>
   </ng-template>
 </div>

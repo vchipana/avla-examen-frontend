@@ -8,7 +8,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { LoginComponent } from './views/login/login.component';
 import { LoginService } from './views/login/login.service';
+
 import { TareasComponent } from './views/tareas/tareas.component';
+import { TareasService } from './views/tareas/tareas.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +32,7 @@ import { AppComponent } from './app.component';
     
     ModalModule.forRoot(),
   ],
-  providers: [LoginService, ],
+  providers: [LoginService, TareasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
