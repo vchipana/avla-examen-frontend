@@ -44,7 +44,10 @@ h3 {
   width: 292px;
 }
 .btn.btn-mediano {
-  width: 164px;
+  width: 150px;
+}
+.btn.btn-pequenio {
+  width: 100px;
 }
 .btn svg {
   font-size: 25px;
@@ -75,3 +78,10 @@ table thead th {
   border: 0;
 }
 /*********************************/
+
+/************* ALINEAR ***********/
+.justify-center {
+  justify-content: center;
+}
+/*********************************/
+

@@ -20,7 +20,7 @@ export class TareasComponent {
     this.router.navigate(['login']);
   }
   
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
+  openModal(template: TemplateRef<any>, tamanio) {
+    this.modalRef = this.modalService.show(template, {class: tamanio});
   }
 }
