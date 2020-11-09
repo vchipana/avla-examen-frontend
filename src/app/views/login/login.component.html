@@ -5,12 +5,12 @@
       <div class="row margin-top-25 margin-bottom-25">
         <div class="offset-md-2 col-md-8">
           <div class="form-group">
-            <label class="etiqueta" for="exampleInputUsername">USUARIO</label>
+            <label class="etiqueta" for="exampleInputUsername">USUARIO*</label>
             <input type="text" class="form-control" id="exampleInputUsername" name="username" [(ngModel)]="usuario.username">
           </div>
           
           <div class="form-group">
-            <label class="etiqueta" for="exampleInputPassword1">PASSWORD</label>
+            <label class="etiqueta" for="exampleInputPassword1">PASSWORD*</label>
             <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="usuario.password">
           </div>
         </div>
@@ -21,4 +21,34 @@
       </div>
     </form>
   </div>
+  
+  <ng-template #templateUsuarioNoEncontrado>
+    <div class="modal-header">
+      <h3 class="modal-title pull-left">MENSAJE</h3>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body text-center">
+      <p>El usuario no ha sido encontrado</p>
+    </div>
+    <div class="modal-footer justify-center">
+      <button (click)="modalRef.hide()" type="button" class="btn btn-outline-secondary btn-pequenio">CERRAR</button>
+    </div>
+  </ng-template>
+  
+  <ng-template #templateUsuarioNoDatos>
+    <div class="modal-header">
+      <h3 class="modal-title pull-left">MENSAJE</h3>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body text-center">
+      <p>Debe completar todos los campos</p>
+    </div>
+    <div class="modal-footer justify-center">
+      <button (click)="modalRef.hide()" type="button" class="btn btn-outline-secondary btn-pequenio">CERRAR</button>
+    </div>
+  </ng-template>
 </div>
