@@ -2,10 +2,19 @@
   
 }
 
+.panel-logo {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.panel-logo img {
+  width: 100px;
+}
+
 .panel-login {
   width: 400px;
   margin: 0 auto;
   padding: 30px 20px;
   border: 1px solid #ACACAC;
-  margin-top: 70px;
+  margin-top: 10px;
 }
