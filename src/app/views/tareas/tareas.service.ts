@@ -16,4 +16,12 @@ export class TareasService {
     return this.httpClient.post('http://localhost:3000/tarea', params);
   } 
   
+  obtenerTareas(): Observable<any> {
+    return this.httpClient.get('http://localhost:3000/tareas');
+  } 
+  
+  eliminarTarea(id): Observable<any> {
+    return this.httpClient.delete('http://localhost:3000/tarea/' + id);
+  } 
+  
 }

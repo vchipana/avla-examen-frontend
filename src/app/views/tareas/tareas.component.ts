@@ -14,6 +14,7 @@ export class TareasComponent implements OnInit {
   
   usuarios: any = [];
   tarea: any = {};
+  tareas: any = [];
   
   modalRef: BsModalRef;
   
@@ -24,6 +25,7 @@ export class TareasComponent implements OnInit {
     
   ngOnInit() {
     this.obtenerUsuarios();
+    this.obtenerTareas();
   }
   
   obtenerUsuarios() {
@@ -37,6 +39,23 @@ export class TareasComponent implements OnInit {
   crearTarea() {
     this.tareasService.crearTarea(this.tarea).subscribe(
       res => {
+        this.obtenerTareas();
+      }
+    );
+  }
+  
+  obtenerTareas() {
+    this.tareasService.obtenerTareas().subscribe(
+      res => {
+        this.tareas = res;
+      }
+    );
+  }
+  
+  eliminarTarea() {
+    this.tareasService.eliminarTarea(this.tarea.tareaID).subscribe(
+      res => {
+        this.obtenerTareas();
       }
     );
   }
