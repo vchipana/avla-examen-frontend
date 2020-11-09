@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { LoginComponent } from './views/login/login.component';
 import { TareasComponent } from './views/tareas/tareas.component';
 
@@ -17,6 +19,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
